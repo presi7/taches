@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <form id="connexion-form" action="traitement_connexion.php" method="POST">
+        <!-- Les champs du formulaire de connexion -->
+        <input type="text" name="username" placeholder="Nom d'utilisateur">
+        <input type="password" name="password" placeholder="Mot de passe">
+        <button type="submit">Se connecter</button>
+    </form>
+
+    <script>
+        document.getElementById("connexion-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+            // Effectue le traitement de la connexion côté serveur ici (via AJAX ou en rechargeant la page)
+
+            // Redirige vers la page index.html après la connexion
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

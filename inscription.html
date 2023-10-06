@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inscription</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Inscription</h1>
+    <form id="inscription-form" action="traitement_inscription.php" method="POST">
+        <input type="text" name="nom" placeholder="Nom" required>
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
+        <input type="password" name="motdepasse" placeholder="Mot de passe" required>
+        <input type="password" name="confirmpassword" placeholder="Confirmer le mot de passe" required>
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <script>
+        document.getElementById("inscription-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+    
+            // Effectue le traitement de l'inscription côté serveur ici (via AJAX ou en rechargeant la page)
+    
+            // Redirige vers la page de connexion
+            window.location.href = "connexion.html";
+        });
+    </script>    
+</body>
+</html>
